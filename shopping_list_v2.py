@@ -1,3 +1,8 @@
+# Things to add:
+#  Make it possible to move items from one position to another
+#  Change the formatting of the list display
+#  Create a CLEAR command that removes everything from the list
+
 import os
 
 shopping_list = []
@@ -44,10 +49,8 @@ def show_list():
     clear_screen()
     print("Here's your list:")
     
-    index = 1
-    for item in shopping_list:
+    for (index, item) in enumerate(shopping_list, start=1):
         print("{}.{}".format(index, item))
-        index += 1
     print("-"*10)
     
 def remove_from_list():
